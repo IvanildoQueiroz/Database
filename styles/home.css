@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image:url('../assets/fundo.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    
+}
+header{
+    min-width:800px ;
+    height: 80px;
+    background-color: #4e1564;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header > div{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+header #logo{
+    width: 70px;
+    height: 70px;
+    filter: drop-shadow(1px 1px 3px #fff);
+    background-color: rgba(17, 128, 231, 0.425);
+    padding: 2px;
+    border-radius: 5px;
+}
+header ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+header ul li{
+    font-size: clamp(9px,12px,25px);
+    list-style: none;
+    text-align: center;
+}
+header ul li:nth-child(1){
+    transform: scale(1.1);
+    transition: all .2s ease;
+    border-bottom: 2px solid orangered;
+}
+header ul li#login{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-left: 2px solid #ffffff5d;
+    padding-left:8px;
+}
+header ul li#login img{
+    width: 50px;
+    border-radius: 30%;
+}
+header ul li#login img:hover,header ul li#login{
+    cursor: pointer;
+}
+header ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+header ul li a:hover{
+    transform: scale(1.1);
+    transition: all .2s ease;
+    border-bottom: 2px solid orangered;
+}
+article{
+    width: 450px;
+    height: 450px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 10px 0px;
+}
+.allBtn {
+    display: flex;
+    gap: 10px;
+}
+.allBtn button{
+    background-color: aqua;
+    text-shadow: 1px 1px 3px #000;
+    width: 100%;
+}
+
+.allBtn button:hover{
+    background-color: #fff;
+    color: aqua;
+}
+.activeInput{
+    width: 100%;
+    opacity: 1;
+    animation: insertInput;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    color: #000;
+    display: flex;
+    align-items: center;
+    border: 2px solid #fff;
+}
+.inputOfData span{
+    opacity: 0;
+    color: #fff;
+    height: 100%;
+    padding: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    animation: insertInput 1s forwards;
+
+}
+.inputOfData input{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+article.result{
+    display: none;
+    background-color: #11a38b3a;
+    text-shadow: 1px 1px 5px black;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color:rgb(0, 238, 255) gray;
+    position: relative;
+}
+article.result table{
+    margin-bottom: 10px;
+    position: relative;
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+}
+article.result table th{
+    background-color: #4e1564;
+    margin-bottom: 100px;
+}
+article.result table th{
+   
+    border: 1px solid;
+    border-collapse: collapse;
+}
+article.result table td{
+    border: 1px solid;
+    border-collapse: collapse;
+}
+article.result table tr:nth-child(2n +1){
+   background-color: #ffffff46;
+}
+article h2{
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+}
+article input{
+    padding: 10px 20px;
+    border: none;
+    color: #4e1564;
+    font-size: 20px;
+}
+article button{
+    width: 100%;
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4e1564;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+article button:hover{
+    background-color: #671d85;
+}
+.spinner-Image{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: loader;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count:infinite ;
+    
+}
+.message{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff91;
+}
+.active{
+    display: block;
+}
+@keyframes loader {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes insertInput {
+    0%{
+        height: 0px;
+
+    }
+    100%{
+        height: 30px;
+        opacity: 1;
+        
+    }
+}

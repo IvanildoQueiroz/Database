@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <title>Document</title>
+    <!-- <script src="../js/home.js" defer></script> -->
+    <script src="../js/BD.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="../assets/logo.png" alt="imagem da logo" id="logo" />
+        <h2>BD Corporation</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../pages/home.html">find in Database</a></li>
+          <li><a href="./register.html">Register</a></li>
+          <li><a href="../index.html">Find Data</a></li>
+          <li><a href="../pages/changeData.html">Change Data</a></li>
+          <li id="login">Login <img src="../assets/loginBD.png" alt="" /></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article class="findDataInBD">
+        <h2>Find Data</h2>
+        <hr />
+        <h3>Saerch for</h3>
+        <div class="allBtn">
+          <button class="btn-id">ID</button>
+          <button class="btn-name">Name</button>
+          <button class="btn-age">Age</button>
+        </div>
+        <div class="inputOfData">
+          <span></span><input type="text" class="getFindData" />
+        </div>
+        <button id="find">Search</button>
+        <div class="message">
+          <div class="spinner-border" role="status">
+            <span class="spinner-Image"
+              ><img src="../assets/spinner.png" alt="spinner"
+            /></span>
+          </div>
+        </div>
+      </article>
+      <article class="result">
+        <table>
+          <caption>
+            Result of your find:
+          </caption>
+          <thead id="thead">
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Idade</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+        <a href="home.html"><button class="newSearch">New Search</button></a>
+      </article>
+    </main>
+    <!-- <footer>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+        <address>Lorem ipsum dolor, nº 545 <br>Lorem ipsum</address>
+    </footer> -->
+  </body>
+</html>

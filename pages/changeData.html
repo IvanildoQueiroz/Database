@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Data</title>
+    <link rel="stylesheet" href="../styles/changeData.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+   <script src="../js/changeData.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+          <img src="../assets/logo.png" alt="imagem da logo" id="logo" />
+          <h2>BD Corporation</h2>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../pages/home.html">find in Database</a></li>
+            <li><a href="../pages/register.html">Register</a></li>
+            <li><a href="../index.html">Find Data</a></li>
+            <li><a href="../pages/changeData.html">Change Data</a></li>
+            <li id="login">Login <img src="../assets/loginBD.png" alt="" /></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+            <form method="PUT">
+                <fieldset id="search">
+                    <legend>Alter data person</legend>
+                    <section id="searchType">
+                        <label for="search">Search Type:&nbsp;</label>
+                        <select name="search" >
+                            <option value="" disabled selected>choose one option</option>
+                            <option value="name">Name</option>
+                            <option value="age">Age</option>
+                            <option value="id">ID</option>
+                        </select>
+                        <input type="text" id="data">
+                        <input type="button" value="Search" id="btn-search">
+                    </section>
+                    <div class="message active-message"></div>
+                    <section id="data-change">
+                        <fieldset id="change">
+                            <legend>Data to change</legend>
+                            <input type="text" name="name" id="name" placeholder="Name" >
+                            <input type="number" name="age" id="age" placeholder="Age" >
+                            <button type="submit" id="submit">atualizar</button>
+                        </fieldset>
+                    </section>
+                </fieldset>
+            </form>
+
+        <!-- <article>
+
+        </article> -->
+      </main>
+</body>
+</html>

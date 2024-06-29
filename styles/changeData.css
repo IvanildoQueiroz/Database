@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image:url('../assets/fundo.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    
+}
+header{
+    min-width:800px ;
+    height: 80px;
+    background-color: #4e1564;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header > div{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+header #logo{
+    width: 70px;
+    height: 70px;
+    filter: drop-shadow(1px 1px 3px #fff);
+    background-color: rgba(17, 128, 231, 0.425);
+    padding: 2px;
+    border-radius: 5px;
+}
+header ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+header ul li{
+    font-size: clamp(9px,12px,25px);
+    list-style: none;
+    text-align: center;
+}
+header ul li:nth-child(4){
+    transform: scale(1.1);
+    transition: all .2s ease;
+    border-bottom: 2px solid orangered;
+}
+header ul li#login{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-left: 2px solid #ffffff5d;
+    padding-left:8px;
+}
+header ul li#login img{
+    width: 50px;
+    border-radius: 30%;
+}
+header ul li#login img:hover,header ul li#login{
+    cursor: pointer;
+}
+header ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+header ul li a:hover{
+    transform: scale(1.1);
+    transition: all .2s ease;
+    border-bottom: 2px solid orangered;
+}
+fieldset{
+    width: 450px;
+    height: 450px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 10px 0px;
+    position: relative;
+}
+fieldset legend{
+    padding: 10px;
+}
+fieldset label{
+    font-size: 18px;
+    font-weight: bold;
+}
+fieldset input{
+    width: 100%;
+    margin-top:10px ;
+    padding: 1px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: rgb(11, 80, 80);
+    font-size: 22px;
+    outline:none ;
+}
+fieldset button{
+    width: 100%;
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4e1564;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    width: 420px;
+}
+fieldset button:hover{
+    background-color: #671d85;
+}
+fieldset section fieldset{
+    height: 250px;
+    padding: 5px;
+    margin: 0;
+}
+#searchType{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#searchType input{
+    width: 100px;
+    margin: 0 0  0 20px;
+    height: 20px;
+    font-size: 15px;
+}
+#searchType input:last-child{
+background-color: #ccc;
+cursor: pointer;
+&:active{
+    background-color: #aaa;
+}
+}
+fieldset section fieldset#change input{
+    height: 20px;
+    font-size: 12px;
+}
+fieldset section fieldset button{
+    height: 30px;
+    position: static;
+    padding: 0;
+}
+.active-message{
+    background-color: #ffffffca;
+    width: 100%;
+    min-height: 70px;
+    margin-top: 5px;
+    overflow: auto;
+    color: #4e1564;
+    padding-left: 10px;
+    list-style: none;
+}
+.Data-selected{
+    background-color: #3e3b3bec;
+    color:#fff;
+    padding-left: 10px;
+}

@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image:url('../assets/fundo.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    
+}
+header{
+    min-width:800px ;
+    height: 80px;
+    background-color: #4e1564;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header > div{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+header #logo{
+    width: 70px;
+    height: 70px;
+    filter: drop-shadow(1px 1px 3px #fff);
+    background-color: rgba(17, 128, 231, 0.425);
+    padding: 2px;
+    border-radius: 5px;
+}
+header ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+header ul li{
+    font-size: clamp(9px,12px,25px);
+    list-style: none;
+    text-align: center;
+}
+header ul li#login{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-left: 2px solid #ffffff5d;
+    padding-left:8px;
+}
+header ul li#login img{
+    width: 50px;
+    border-radius: 30%;
+}
+header ul li#login img:hover,header ul li#login{
+    cursor: pointer;
+}
+header ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+header ul li a:hover{
+    transform: scale(1.1);
+    transition: all .2s ease;
+    border-bottom: 2px solid orangered;
+}
+main article{
+    text-align: center;
+}
+main article :is(h1){
+    margin-top: 5%;
+    font-size:clamp(2vw,6vw,10vw);
+    text-shadow: 0px 0px 15px #fff;
+}
+main article h2{
+    margin-top: 5%;
+    font-size:clamp(4vw,4vw,10vw);
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    text-shadow: 0px 0px 55px #165b7a;
+}
+
+footer{
+    height: 80px;
+    background-color: #333;
+}
